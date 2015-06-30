@@ -30,7 +30,7 @@ angular.module('sketchupApp')
                 return _blocks
             },
             toSketchupScript: function () {
-                var script = ["data:text;charset=utf-8,"];
+                var script = [];
                 _.each(_blocks, function (block, index) {
                     script.push(block.toSketchupScript(index))
                 });
