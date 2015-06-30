@@ -1,8 +1,10 @@
 {
   "name": "sketchup",
   "version": "0.0.0",
-  "dependencies": {},
-  "repository": {},
+  "dependencies": {
+    "express": "^4.13.0",
+    "gzippo": "^0.2.0"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^2.0.0",

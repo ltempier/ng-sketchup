@@ -1,28 +1,46 @@
+<div class="row" ng-if="buildings">
+
+  <div class="col-md-6" >
+    <div class="panel panel-default">
+      <div class="panel-body p0">
+        <three-scene blocks="buildings" height="63vh" width="100%"></three-scene>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" >
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        You can edit Sketchup script
+      </div>
+      <div class="panel-body">
+        <textarea style="width: 100%; height: 46vh;">
+          {{sketchupScript}}
+        </textarea>
+      </div>
+      <div class="panel-footer">
+        <div class="clearfix">
+          <button class="btn btn-success pull-right" ng-click="download()">Download script</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <div class="row">
-    <div class="col-md-12" ng-class="{'col-md-6' : buildings}">
-        <div class="panel panel-default">
-            <div class="panel-body p0" ng-class="{'whirl traditional' : loading}">
-                <leaflet center="map.center" tiles="map.tiles" height="70vh" width="100%"></leaflet>
-            </div>
-            <div class="panel-footer">
-                <div class="clearfix">
-                    <button class="btn btn-info pull-right" ng-click="start()">Generate 3D</button>
-                </div>
-            </div>
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-body p0" ng-class="{'whirl traditional' : loading}">
+        <leaflet center="map.center" tiles="map.tiles" paths="map.paths" height="70vh" width="100%"></leaflet>
+      </div>
+      <div class="panel-footer">
+        <div class="clearfix">
+          <button class="btn btn-info pull-right" ng-click="start()" ng-if="!buildings">Generate 3D</button>
+          <button class="btn btn-warning pull-right" ng-click="start()" ng-if="buildings">Generate new 3D</button>
         </div>
+      </div>
     </div>
-    <div class="col-md-6" ng-if="buildings">
-        <div class="panel panel-default">
-            <div class="panel-body p0">
-                <three-scene blocks="buildings" height="70vh" width="100%"></three-scene>
-            </div>
-            <div class="panel-footer">
-                <div class="clearfix">
-                    <button class="btn btn-success pull-right" ng-click="">Download script</button>
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
 
 
