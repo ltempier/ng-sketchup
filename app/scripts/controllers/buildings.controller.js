@@ -93,7 +93,7 @@ angular.module('sketchupApp')
           }
 
           function convertProjection(coords) {
-            var tileSize = 128; // Pixel size of a single map tile
+            var tileSize = 256; // Pixel size of a single map tile
             var zoom = mapZoom; // Zoom level
             var projection = d3.geo.mercator()
               .center([mapCenter.lng, mapCenter.lat]) // Geographic coordinates of map centre

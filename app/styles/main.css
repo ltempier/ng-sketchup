@@ -12,4 +12,8 @@
 .p0 {
     padding: 0 !important;
 }
-textarea { border: none; }
+
+textarea {
+    resize: none;
+    border: none;
+}
