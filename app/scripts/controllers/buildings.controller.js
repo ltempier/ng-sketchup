@@ -110,7 +110,7 @@ angular.module('sketchupApp')
         var hiddenElement = document.createElement('a');
         hiddenElement.href = encodeURI($scope.sketchupScript);
         hiddenElement.target = '_blank';
-        hiddenElement.download = 'sketchup_script';
+        hiddenElement.download = 'sketchup_script.rb';
         hiddenElement.click();
       };
       $scope.copy = function () {
