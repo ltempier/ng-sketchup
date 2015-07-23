@@ -28,6 +28,10 @@ angular
         templateUrl: 'views/buildings.html',
         controller: 'BuildingsCtrl'
       })
+      .when('/topography', {
+        templateUrl: 'views/topography.html',
+        controller: 'TopographyCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
