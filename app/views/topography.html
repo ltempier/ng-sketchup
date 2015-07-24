@@ -1,7 +1,24 @@
 <div class="container">
-    <div class="text-center">
-        <h2>Work in progress</h2>
 
-        <img src="http://ljdchost.com/cMLpbLc.jpg">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body p0" ng-class="{'whirl traditional' : loading}">
+                    <leaflet center="map.center" tiles="map.tiles" paths="map.paths" height="70vh"
+                             width="100%"></leaflet>
+                </div>
+                <div class="panel-footer">
+                    <div class="clearfix">
+                        <button class="btn btn-info pull-right" ng-click="start()" ng-if="!buildings">Generate 3D
+                        </button>
+                        <button class="btn btn-warning pull-right" ng-click="start()" ng-if="buildings">Generate new
+                            3D
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
 </div>
