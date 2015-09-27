@@ -1,25 +1,16 @@
 <div class="container">
-    <div class="row" ng-if="buildings">
-        <div class="col-md-7">
+    <div class="row" >
+        <div class="col-md-12" ng-if="buildings">
             <div class="panel panel-default">
                 <div class="panel-body p0">
-                    <three-scene blocks="buildings" height="61vh" width="100%"></three-scene>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-5">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    You can edit Sketchup script
-                </div>
-                <div class="panel-body">
-                    <textarea style="width: 100%; height: 48vh;">
-                        {{sketchupScript}}
-                    </textarea>
+                  <three-scene blocks="buildings" height="61vh" width="100%"></three-scene>
                 </div>
                 <div class="panel-footer">
                     <div class="clearfix">
-                        <button class="btn btn-success pull-right" ng-click="download()">Download script</button>
+                      <button class="btn btn-success pull-right" ng-click="download()">Download script</button>
+                      <div>
+                        <p>on ruby console: <strong>load '/path/to/Downloads/sketchup_export.rb'</strong></p>
+                      </div>
                     </div>
                 </div>
             </div>

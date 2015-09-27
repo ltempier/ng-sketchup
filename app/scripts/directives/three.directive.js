@@ -27,9 +27,9 @@ angular.module('sketchupApp')
           renderer.setSize(width, height);
 
           camera = new THREE.PerspectiveCamera(90, width / height, 0.1, 10000);
-          camera.position.x = 10;
-          camera.position.y = 10;
-          camera.position.z = 10;
+          camera.position.x = -200;
+          camera.position.y = 200;
+          camera.position.z = 0;
 
           controls = new THREE.TrackballControls(camera, renderer.domElement);
           controls.minDistance = 200;
@@ -89,6 +89,8 @@ angular.module('sketchupApp')
           renderer.setSize(width, height);
           controls.handleResize();
           render();
+
+          console.log(camera)
         }
 
 
