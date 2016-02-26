@@ -17,7 +17,7 @@ angular.module('sketchupApp')
           zoom: 15
         },
         tiles: {
-          url: '//{s}.tile.osm.org/{z}/{x}/{y}.png',
+          url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
           type: 'xyz'
         },
         paths: {}
