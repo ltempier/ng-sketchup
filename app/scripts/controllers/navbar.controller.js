@@ -11,10 +11,10 @@ angular.module('sketchupApp')
                 text: 'Buildings',
                 path: '/buildings'
             },
-            {
-                text: 'Topography',
-                path: '/topography'
-            }
+            //{
+            //    text: 'Topography',
+            //    path: '/topography'
+            //}
         ];
 
         $scope.getClass = function (menu) {
